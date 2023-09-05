@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+.navbar{
+   position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+
+.logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform left; 
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+    
+}
+
+a{
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: white;
+}
+
+.banner-area{
+    position: relative;
+    background-image: url(../images/beach.jpg);
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    
+}
+
+.contact-area{
+    position: realtive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 250px;
+    background-color: #262626;
+    color: white;
+}
+
+.text-part{
+    width: 65%;
+    font-family: Audiowide;
+    font-size: 10px;
+    font-family: cursive;
+}
+
+
+body, html {
+    height: 100%;
+    height: 80%;
+}
+
+
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/beach.jpg"); /* I go the image from https://www.travelanddestinations.com/best-beaches-in-the-philippines*/
+
+  /* I changed this from 50% 10 100%*/
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+div.gallery {
+    margin: 50px;
+    border: 1px solid #ccc;
+    width: 100px;
+    float: left;
+    padding: 100px;
+    text-align: center;
+}
+
+div.gallery:hover {
+    text-align: left;
+    border: 1px solid black;
+    transform: scale(1.1);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+
+}
+
+div.desc {
+  padding: 60px;
+  text-align: left;
+}
