@@ -1,0 +1,357 @@
+html,body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #DCDCDC;
+	width: 100%; /*I added this so that the thre would be no extra space on the side of the screen*/
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header{
+    width: 100%;
+    height: 70px;
+	position: fixed;
+    background-color: #042331;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header img{
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.header h1{
+    line-height: 70px;
+    color: white;
+        
+}
+
+.content{
+    width: 100%;
+    margin-top: 70px;
+    float: right;
+	transition: 0.7s;
+}
+
+.content p{
+    text-align: left;
+}
+
+.sidebar{
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: #353b48;
+    left: -100%;
+    transition: 0.7s;
+    overflow: auto;
+}
+
+.sidebar header{
+    font-size: 22px;
+    height: auto;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #063146;
+    user-select: none;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+    
+}
+
+#check{
+    display: none;
+    
+}
+
+label #btn,label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #042331;
+    border-radius: 3px;
+    
+    
+}
+
+label #btn{
+    left: 50px;
+    top: 15px;
+    font-size: 30px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s;
+    position: fixed;
+    
+}
+
+label #cancel{
+    z-index: 1111;
+    left: -195px;
+    top: 15px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all .5s ease;
+    position: fixed;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~label #cancel{
+    left: 195px;
+    opacity: 1;
+}
+
+#check:checked ~.content{
+    width: 80%;
+}
+
+.sidebar ul ul{display: none;}
+
+.sidebar ul li:hover ul{
+    display: block;
+}
+
+.sidebar ul ul a:before{
+    content: '\285A';
+    margin-right: 20px;
+}
+
+.sidebar .sub-arrow:after{
+    content: '\203A';
+    float: right;
+    margin-right: 20px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
+.sidebar li:hover .sub-arrow:after{
+    content: '\2039';
+}
+
+@media(max-width:786px){
+	
+	.sidebar{
+		width: 100%;
+		text-align: center;
+	}
+}
+section{
+    background: url(../images/flag2.jpg) no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 75vh;
+    width: 100%;
+    float: center;
+}
+
+.text-part{
+    width: 65%;
+    font-family: Audiowide;
+    font-size: 10px;
+    font-family: cursive;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+p{
+font-size: 18px;
+}
+
+h2{
+    text-align: left;
+    font-size: 25px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+img {
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.5); /* This is for it to zoom in when I hover over it */
+}
+
+#container{ /* This is to center the gallery*/
+    max-width: 100%;
+	background-color: white;
+    color: black;
+	padding: -0.5%;
+	margin-left: 25%;
+	margin-right: 10%;
+    margin-top: 10%;
+	height: 190%;
+	float: center;
+	width: 100%;
+}
+
+div.gallery { /* This is for the spacing of each block, to center it and to design the hoverable blocks*/
+  margin: 5%;
+  float: left;
+  max-width: 22%;
+  margin-left: 1%;
+    margin-right: 5%; /* The margink is the distance from the left and/or the right*/
+    padding: -100%;
+	color: black; /* This is for the color of the text*/
+	background-color: #DCDCDC;
+}
+
+div.gallery:hover {
+    transform: scale(1.2); 
+    border-color: black;
+    box-shadow: 5px 10px 8px #888888; /* This is to create a shadow effect when it is hovered on*/
+    border: 1px solid black;
+}
+
+div.gallery img { /* This is to adjust the image*/
+  width: 70%;
+  height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    border-color: black;
+}
+
+div.desc { /* This is the design for the description for each block*/
+  padding: 15px;
+  text-align: left;
+    font-size: 16px;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer{
+    position: realtive;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 60%;
+    background-color: #042331;
+    color: white;
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box h3{
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box .footer-content{
+   margin: 20px 0 0 0;
+	height: 100%;
+    
+}
+
+.left .footer-content p{
+	font-size: 17px;
+    text-align: justify;
+}
+
+.left .footer-content .social{
+    margin: 20px 0 0 0;
+}
+
+.left .footer-content .social a{
+    padding: 0 2px;
+}
+
+.left .footer-content .social a span{
+    height: 40px;
+    width: 40px;
+    background:  #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+    color: white;
+}
+
+.left .footer-content .social a span:hover{
+    background: #f12020;
+}
+
+.footer-bottom{
+	width: 100%;
+	height: 35px;
+	margin: auto;
+	background:  #1a1a1a;
+}
+
+.footer-bottom p{
+	text-align: center;
+	color: white;
+}
